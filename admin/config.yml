@@ -1,1 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "kegiatan"
+    label: "Kegiatan"
+    folder: "kegiatan"
+    create: true
+    fields:
+      - { label: "Judul Kegiatan", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Foto", name: "image", widget: "image" }
